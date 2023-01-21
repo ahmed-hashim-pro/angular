@@ -30,6 +30,8 @@
     "@angular/router": "^15.0.0",
     "@ionic/angular": "^6.1.9",
     "@nguniversal/express-engine": "^15.1.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "express": "^4.15.2",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",

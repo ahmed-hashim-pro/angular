@@ -3,13 +3,21 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ],
+      "@env/*": [
+        "./src/environments/*"
+      ],
+      "@landing/*": [
+        "./src/app/landing/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -19,10 +27,11 @@
     "target": "es2015",
     "module": "es2020",
     "lib": [
-      "es2018", 
+      "es2018",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "noImplicitReturns": false,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
