@@ -1,8 +1,29 @@
+/*!
+ * Copyright (c) 2023. Developed By
+ * Ahmed Hashim
+ * https://geohashim.com
+ */
+
+
+html,
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+ion-content::part(scroll) {
+  //height: 100vh;
+  perspective: 3px;
+  overflow: hidden;
+  overflow-y: auto;
+  color: white;
+}
+
 .full{
   background-image: url("/assets/images/4.jpg");
 
 }
-.center-content{
+.text-center-content{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,15 +34,17 @@
   //padding: 200px;
   border-radius: 30px;
   .title{
-    font-size: 30px;
+    font-size: 48px;
     font-weight: 700;
     z-index: -1;
+    text-align: center;
     //transform: translateY(-30vh) translateZ(1px) scale(1.5);
   }
   .desc{
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
     color: #e7e0e0;
+    text-align: center;
   }
 
 }
@@ -177,17 +200,7 @@
 }
 
 /////
-ion-content::part(scroll) {
-  //height: 100vh;
-  perspective: 3px;
-  overflow: hidden;
-  overflow-y: auto;
-}
-html,
-body {
-  background-color: black;
-  font-family: sans-serif;
-}
+
 .container {
   height: 100vh;
   //overflow: hidden;
@@ -215,24 +228,37 @@ section {
   }
   &.text {
     height: 50vh;
+    color: white;
   }
   &.heading {
     z-index: -1;
     transform: translateY(-60vh) translateZ(1px) scale(1.5);
+    color: white;
+    h1{
+      color: white;
+
+    }
   }
 }
 
-.footer {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  h3{
-    font-weight: normal;
-    color: var(--color-blue);
-  }
+.ha-top-shadow{
+  -webkit-box-shadow: 0px -8px 27px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -8px 27px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -8px 27px 0px rgba(0,0,0,0.75);
 }
+
+
+.ha-bottom-shadow{
+  -webkit-box-shadow: 0px 27px 41px -24px rgb(0 0 0 / 75%);
+  -moz-box-shadow: 0px 27px 41px -24px rgb(0 0 0 / 75%);
+  box-shadow: 0px 27px 41px -24px rgb(0 0 0 / 75%);
+}
+
+
+.ha-top-bottom-shadow{
+  -webkit-box-shadow: -3px 3px 63px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -3px 3px 63px 0px rgba(0,0,0,0.75);
+  box-shadow: -3px 3px 63px 0px rgba(0,0,0,0.75);
+}
+
+

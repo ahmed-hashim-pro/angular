@@ -1,3 +1,10 @@
+
+/*
+ * Copyright (c) 2023. Developed By
+ * Ahmed Hashim
+ * https://geohashim.com
+ */
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 

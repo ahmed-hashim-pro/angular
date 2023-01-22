@@ -6,16 +6,17 @@
   -->
 
 <ion-header translucent>
-  <ion-toolbar  style=" --background: transparent;">
-    <ion-title>Angular Example</ion-title>
+  <ion-toolbar [style.padding-inline-start]="marginStart" [style.padding-inline-end]="marginEnd" style=" --background: transparent;">
+    <img slot="start" style="width: 60px"  [src]="'assets/images/logo.png' | safePipe">
+    <ion-title slot="start" style="color: white">Angular Example</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content scroll-events="true" parallax-header fullscreen="true">
+<ion-content scroll-events="true" parallax-header fullscreen="true" style="    --background: black;">
 
   <section class="image" style="background-image: url(/assets/images/7.jpg);scale: 144%"></section>
-  <section class="heading">
-    <div class="center-content">
+  <section class="heading" style="transform: translateY(-60vh)">
+    <div class="text-center-content">
       <p uk-scrollspy=" cls: uk-animation-slide-top; delay: 80" class="title">{{'Hello From Hashim'}}</p>
       <p uk-scrollspy=" cls: uk-animation-slide-bottom; delay: 100" class="desc">{{'this is an example of angular ssr'}}</p>
     </div>
@@ -23,26 +24,26 @@
 
   <div class=" section-1 section header-image  " >
     <div class="center-content">
-      <p class="title">{{'Just imagine'}}</p>
+      <p class="title" style="margin-top: -80px">{{'Just imagine'}}</p>
     </div>
   </div>
-  <div style="width: 100%;height: 100vh;z-index: 200;position: relative;margin-top: -30px;    border-radius: 70px 70px 0 0;" class=" main-content full">
+  <div  style="width: 100%;height: 100vh;z-index: 200;position: relative;margin-top: -30px;    border-radius: 70px 70px 0 0;" class=" main-content full ha-bottom-shadow">
 
     <div class=" section section-2 " style="    border-radius: 70px 70px 0 0;">
       <div style="z-index: 200;  transform: skew(10deg, 10deg) translateZ(1px) scale(2.5);">
-        <p uk-scrollspy=" cls: uk-animation-slide-bottom; delay: 1000" class="title" style=" ">{{'Beautiful, isn\'t it'}}</p>
+        <p uk-scrollspy=" cls: uk-animation-slide-bottom; delay: 300" class="title" style=" ">{{'Beautiful, isn\'t it'}}</p>
       </div>
     </div>
 
   </div>
 
-  <ng-container class="">
+  <ng-container class="" [style.margin-inline-start]="marginStart" [style.margin-inline-end]="marginEnd">
 
     <section class="image" style="background-image: url(/assets/images/4.jpg)"></section>
     <section class="heading">
       <h1>Wavy</h1>
     </section>
-    <section class="text" style="--bg: #c8c8bc">
+    <section class="text ha-top-bottom-shadow" style="--bg: #c8c8bc">
       <h1>Here we are</h1>
     </section>
 
@@ -50,14 +51,12 @@
     <section class="heading">
       <h1>Suits..</h1>
     </section>
-    <section class="text" style="--bg: #9dbdc4">
-      <h1>Up into the sky</h1>
+    <section class="text ha-top-shadow" style="--bg: #3a3da4;" >
+      <h1 style="color: white">Up into the sky</h1>
     </section>
 
   </ng-container>
 
-  <div class="footer">
-    <h3>Pretty cool right?</h3>
-    <a style="margin-top: 16px" slot="end" >Powered by Ahmed Hashim</a>
-  </div>
+  <ha-footer></ha-footer>
+
 </ion-content>

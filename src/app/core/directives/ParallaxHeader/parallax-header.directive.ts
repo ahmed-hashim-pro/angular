@@ -1,3 +1,10 @@
+
+/*
+ * Copyright (c) 2023. Developed By
+ * Ahmed Hashim
+ * https://geohashim.com
+ */
+
 import {Directive, ElementRef, HostListener, Input, Renderer2} from '@angular/core';
 import {DomController} from '@ionic/angular';
 
@@ -28,9 +35,7 @@ export class ParallaxHeader {
       });
     }else{
       this.header = this.element.nativeElement.getElementsByClassName('header-image')[0]
-      // this.headerHeight = this.header.clientHeight;
 
-      // console.log(this.headerHeight );
     }
 
   }
